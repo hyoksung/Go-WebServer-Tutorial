@@ -23,7 +23,7 @@ func home(w http.ResponseWriter, r *http.Request) {
 
 		//If not match found, empty string is returned. Use it for validation!
 		if capital != "" {
-			fmt.Fprintf(w, capital)
+			fmt.Fprint(w, capital)
 		} else {
 			//Returns 404, Not found
 			w.WriteHeader(http.StatusNotFound)
