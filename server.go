@@ -59,5 +59,6 @@ func main() {
 	rtr.HandleFunc("/servertime", getServerTime)
 	rtr.HandleFunc("/random", getRandomNumber)
 	rtr.HandleFunc("/users/{category}/{id:[0-9]+}", handleUsers)
+	fmt.Println("Server listening on port " + port)
 	log.Fatal(http.ListenAndServe(port, rtr))
 }
